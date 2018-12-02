@@ -46,7 +46,7 @@ public class SalesMessageController {
 
 	}
 
-	public boolean process(List<Message> messages) {
+	public void process(List<Message> messages) {
 		int processedMessages = 0;
 		StringBuilder adjustmentsLog = new StringBuilder();
 
@@ -85,7 +85,6 @@ public class SalesMessageController {
 			System.out.println("\n*** Adjustment Log *** \n" + adjustmentsLog.toString());
 		}
 
-		return true;
 	}
 
 	private void createAdjustmentMessageLog(StringBuilder adjustmentsLog, Message message) {
